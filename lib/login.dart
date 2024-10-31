@@ -55,7 +55,7 @@ class _LoginState extends State<Login> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Welcome to Egzon/Nejc APP",
+                          "Welcome EMP-Calendar",
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 20,
