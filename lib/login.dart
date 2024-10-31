@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'home.dart'; // Import HomePage
 
 class Login extends StatefulWidget {
+  const Login({super.key});
+
   @override
   _LoginState createState() => _LoginState();
 }
@@ -40,11 +42,11 @@ class _LoginState extends State<Login> {
                 height: MediaQuery.of(context).size.height * 0.65,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(16.0),
                     topRight: Radius.circular(16.0),
                   ),
-                  border: Border.all(color: Color(0x4d9e9e9e), width: 1),
+                  border: Border.all(color: const Color(0x4d9e9e9e), width: 1),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(16),
@@ -52,7 +54,7 @@ class _LoginState extends State<Login> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Welcome to Egzon/Nejc APP",
                           style: TextStyle(
                             fontWeight: FontWeight.w700,
@@ -60,8 +62,8 @@ class _LoginState extends State<Login> {
                             color: Colors.black,
                           ),
                         ),
-                        SizedBox(height: 8),
-                        Text(
+                        const SizedBox(height: 8),
+                        const Text(
                           "Prosim prijavite se za nadaljevanje",
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
@@ -69,10 +71,10 @@ class _LoginState extends State<Login> {
                             color: Color(0xff5e5e5e),
                           ),
                         ),
-                        SizedBox(height: 30),
+                        const SizedBox(height: 30),
                         TextField(
                           controller: emailController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: "E-posta",
                             labelStyle: TextStyle(
                               fontWeight: FontWeight.w700,
@@ -83,11 +85,11 @@ class _LoginState extends State<Login> {
                             border: UnderlineInputBorder(),
                           ),
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         TextField(
                           controller: passwordController,
                           obscureText: true,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             labelText: "Geslo",
                             labelStyle: TextStyle(
                               fontWeight: FontWeight.w700,
@@ -98,7 +100,7 @@ class _LoginState extends State<Login> {
                             border: UnderlineInputBorder(),
                           ),
                         ),
-                        SizedBox(height: 30),
+                        const SizedBox(height: 30),
                         MaterialButton(
                           onPressed: () {
                             Navigator.push(
@@ -106,11 +108,12 @@ class _LoginState extends State<Login> {
                               MaterialPageRoute(builder: (context) => HomePage()),
                             );
                           },
-                          color: Color(0xff3a57e8),
+                          color: const Color(0xff3a57e8),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           padding: const EdgeInsets.all(16),
+                          minWidth: MediaQuery.of(context).size.width,
                           child: Text(
                             "Prijava",
                             style: TextStyle(
@@ -119,16 +122,15 @@ class _LoginState extends State<Login> {
                               color: Colors.white,
                             ),
                           ),
-                          minWidth: MediaQuery.of(context).size.width,
                         ),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Align(
                           alignment: Alignment.centerRight,
                           child: TextButton(
                             onPressed: () {
                               // Handle forgot password logic here
                             },
-                            child: Text(
+                            child: const Text(
                               "Pozabljeno geslo?",
                               style: TextStyle(
                                 fontSize: 14,
@@ -137,7 +139,7 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 30),
+                        const SizedBox(height: 30),
                         Align(
                           alignment: Alignment.center,
                           child: MaterialButton(
@@ -147,9 +149,10 @@ class _LoginState extends State<Login> {
                             color: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0),
-                              side: BorderSide(color: Color(0xff808080)),
+                              side: const BorderSide(color: Color(0xff808080)),
                             ),
                             padding: const EdgeInsets.all(16),
+                            minWidth: MediaQuery.of(context).size.width,
                             child: Text(
                               "Sign Up",
                               style: TextStyle(
@@ -158,7 +161,6 @@ class _LoginState extends State<Login> {
                                 color: Colors.black,
                               ),
                             ),
-                            minWidth: MediaQuery.of(context).size.width,
                           ),
                         ),
                       ],
